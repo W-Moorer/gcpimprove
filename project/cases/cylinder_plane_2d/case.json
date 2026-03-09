@@ -1,0 +1,43 @@
+{
+  "case_id": "cylinder_plane_2d",
+  "param_id": "p0001",
+  "analysis": {
+    "product": "Abaqus/Standard",
+    "step_type": "StaticStep",
+    "nlgeom": false
+  },
+  "geometry": {
+    "type": "cylinder_plane_2d",
+    "R": 10.0,
+    "block_w": 80.0,
+    "block_h": 20.0
+  },
+  "material": {
+    "name": "Mat-1",
+    "E": 210000.0,
+    "nu": 0.3
+  },
+  "contact": {
+    "mode": "contact_pair",
+    "normal": "hard",
+    "tangential": "frictionless",
+    "finite_sliding": true
+  },
+  "mesh": {
+    "family": "CPE4I",
+    "global_size": 1.0,
+    "refine_size": 0.1,
+    "refine_radius": 5.0
+  },
+  "loading": {
+    "disp": -0.02,
+    "time_period": 1.0,
+    "initial_inc": 0.001,
+    "max_inc": 0.01,
+    "min_inc": 1e-08
+  },
+  "output": {
+    "history_surface_vars": ["CFNM", "CAREA", "XN", "CMN"],
+    "field_surface_vars": ["CSTRESS", "CDISP", "CFORCE", "CSTATUS", "CNAREA"]
+  }
+}

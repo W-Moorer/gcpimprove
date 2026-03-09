@@ -1,0 +1,9 @@
+{
+  "abaqus_path": "C:\\SIMULIA\\Commands\\abaqus.bat",
+  "abaqus_bat": "C:\\SIMULIA\\Commands\\abaqus.bat",
+  "abq_bat": "C:\\SIMULIA\\Commands\\abq2024.bat",
+  "sma_launcher": "C:\\SIMULIA\\EstProducts\\2024\\win_b64\\code\\bin\\SMALauncher.exe",
+  "abaqus_version": "2024",
+  "install_root": "C:\\SIMULIA\\EstProducts\\2024\\win_b64",
+  "note": "Abaqus 2024 安装路径已自动检测并配置"
+}

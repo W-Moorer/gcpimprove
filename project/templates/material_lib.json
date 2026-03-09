@@ -1,0 +1,28 @@
+{
+  "materials": {
+    "Steel": {
+      "name": "Steel",
+      "E": 210000.0,
+      "nu": 0.3,
+      "density": 7.85e-09
+    },
+    "Aluminum": {
+      "name": "Aluminum",
+      "E": 70000.0,
+      "nu": 0.33,
+      "density": 2.7e-09
+    },
+    "Copper": {
+      "name": "Copper",
+      "E": 110000.0,
+      "nu": 0.34,
+      "density": 8.96e-09
+    },
+    "Titanium": {
+      "name": "Titanium",
+      "E": 116000.0,
+      "nu": 0.34,
+      "density": 4.5e-09
+    }
+  }
+}

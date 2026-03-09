@@ -1,0 +1,192 @@
+1
+
+   Abaqus 2024                                  Date 09-3月-2026   Time 10:55:00
+   For use by WhiteDeath under license from Dassault Systemes or its subsidiary.
+
+
+
+                         The Abaqus Software is a product of:
+
+                           Dassault Systemes SIMULIA Corp.
+                           1301 Atwood Avenue, Suite 101W
+                              Johnston, RI 02919, USA
+ 
+
+
+                   The Abaqus Software is available only under license
+                   from Dassault Systemes or its subsidiary and may be
+                   used or reproduced only in accordance with the terms
+                   of such license.
+ 
+                          On machine DESKTOP-21H7M3G 
+                          you are authorized to run
+                          Abaqus/Standard until 31-Dec-2055
+
+                          Your site id is:  
+
+
+ 
+                    For assistance or any other information you may
+                    obtain contact information for your local office
+                    from the world wide web at:
+
+                      https://www.3ds.com/products-services/simulia/services-support/
+
+ 
+                * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+                *                                                         * 
+                *                   *****************                     * 
+                *                   *  N O T I C E  *                     * 
+                *                   *****************                     * 
+                *                                                         * 
+                *                                                         * 
+                *                       Abaqus 2024                       * 
+                *                                                         * 
+                *       BUILD ID: 2023_09_21-20.55.25 RELr426 190762      * 
+                *                                                         * 
+                *                                                         * 
+                *  Please make sure you are using                         * 
+                *  release Abaqus 2024 manuals                            * 
+                *  plus the notes accompanying this release.              * 
+                *                                                         * 
+                *                                                         * 
+                *                                                         * 
+                *                                                         * 
+                * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+
+ 
+
+
+
+     PROCESSING PART, INSTANCE, AND ASSEMBLY INFORMATION
+   *******************************************************
+
+
+     END PROCESSING PART, INSTANCE, AND ASSEMBLY INFORMATION
+   ***********************************************************
+
+
+
+
+     OPTIONS BEING PROCESSED
+   ***************************
+
+
+  *Heading
+  *Element, type=CPE4I
+  *Elset, elset=ASSEMBLY_BLOCK-1__PICKEDSET2
+  *Elset, elset=ASSEMBLY__PICKEDSET8
+  *Elset, elset=ASSEMBLY__S_BLOCK_TOP_S3
+  *material, name=MAT-1
+  *elastic
+  *solidsection, elset=ASSEMBLY_BLOCK-1__PICKEDSET2, material=MAT-1
+  *solidsection, elset=ASSEMBLY_BLOCK-1__PICKEDSET2, material=MAT-1
+  *contactpair, interaction=INTPROP-1, type=SURFACETOSURFACE
+  *contactpair, interaction=INTPROP-1, type=SURFACETOSURFACE
+  *surface, type=ELEMENT, name=ASSEMBLY_S_BLOCK_TOP
+  *surface, type=ELEMENT, name=ASSEMBLY_S_BLOCK_TOP
+  *contactpair, interaction=INTPROP-1, type=SURFACETOSURFACE
+
+ ***ERROR: THE MAIN SURFACE ASSEMBLY_S_IND DOES NOT EXIST.
+ ***NOTE: DUE TO AN INPUT ERROR THE ANALYSIS PRE-PROCESSOR HAS BEEN UNABLE TO 
+          INTERPRET SOME DATA.  SUBSEQUENT ERRORS MAY BE CAUSED BY THIS OMISSION
+  *surfaceinteraction, name=INTPROP-1
+  *surfacebehavior, pressure-overclosure=HARD
+  *contactpair, interaction=INTPROP-1, type=SURFACETOSURFACE
+
+ ***ERROR: THE MAIN SURFACE ASSEMBLY_S_IND DOES NOT EXIST.
+  *contactpair, interaction=INTPROP-1, type=SURFACETOSURFACE
+
+ ***ERROR: THE MAIN SURFACE ASSEMBLY_S_IND DOES NOT EXIST.
+  *surfaceinteraction, name=INTPROP-1
+  *friction
+  *surfacebehavior, pressure-overclosure=HARD
+  *surfaceinteraction, name=INTPROP-1
+  *boundary
+  *boundary
+  *boundary
+  *boundary
+  *contactpair, interaction=INTPROP-1, type=SURFACETOSURFACE
+
+ ***ERROR: THE MAIN SURFACE ASSEMBLY_S_IND DOES NOT EXIST.
+  *surfaceinteraction, name=INTPROP-1
+  *contactpair, interaction=INTPROP-1, type=SURFACETOSURFACE
+
+ ***ERROR: THE MAIN SURFACE ASSEMBLY_S_IND DOES NOT EXIST.
+  *surface, type=ELEMENT, name=ASSEMBLY_S_BLOCK_TOP
+  *output, field, variable=PRESELECT
+  *output, history, variable=PRESELECT
+  *output, field, variable=PRESELECT
+  *output, history, variable=PRESELECT
+  *output, field, variable=PRESELECT
+  *output, history, variable=PRESELECT
+  *Step, name=Step-1, nlgeom=NO
+  *output, field, variable=PRESELECT
+  *output, history, variable=PRESELECT
+  *Step, name=Step-1, nlgeom=NO
+
+ ***WARNING: NODE SET ASSEMBLY_INDENTER-1_INDENTER-REFPT_ HAS NO MEMBERS AND 
+             WILL BE IGNORED.  NODES DEFINED IN THIS SET MAY HAVE BEEN DELETED 
+             BECAUSE THEY WERE NOT CONNECTED TO ANY ELEMENTS.
+
+ ***WARNING: NODE SET ASSEMBLY__PICKEDSET9 HAS NO MEMBERS AND WILL BE IGNORED.  
+             NODES DEFINED IN THIS SET MAY HAVE BEEN DELETED BECAUSE THEY WERE 
+             NOT CONNECTED TO ANY ELEMENTS.
+  *Step, name=Step-1, nlgeom=NO
+  *static
+  *boundary
+  *output, field, variable=PRESELECT
+  *output, history, variable=PRESELECT
+  *endstep
+  *boundary
+  *Step, name=Step-1, nlgeom=NO
+  *static
+  *boundary
+
+ ***ERROR: A BOUNDARY CONDITION HAS BEEN SPECIFIED ON NODE SET 
+           ASSEMBLY__PICKEDSET9 BUT THIS NODE SET IS NOT ACTIVE IN THE MODEL
+
+ ***ERROR: A BOUNDARY CONDITION HAS BEEN SPECIFIED ON NODE SET 
+           ASSEMBLY__PICKEDSET9 BUT THIS NODE SET IS NOT ACTIVE IN THE MODEL
+
+ ***ERROR: A BOUNDARY CONDITION HAS BEEN SPECIFIED ON NODE SET 
+           ASSEMBLY__PICKEDSET9 BUT THIS NODE SET IS NOT ACTIVE IN THE MODEL
+  *endstep
+
+ ***ERROR: NODE SET ASSEMBLY__PICKEDSET9 HAS NOT BEEN DEFINED
+
+ ***ERROR: NODE SET ASSEMBLY__PICKEDSET9 HAS NOT BEEN DEFINED
+
+
+
+                            P R O B L E M   S I Z E
+
+
+          NUMBER OF ELEMENTS IS                                   800
+          NUMBER OF NODES IS                                     3261
+          NUMBER OF NODES DEFINED BY THE USER                     861
+          NUMBER OF INTERNAL NODES GENERATED BY THE PROGRAM      2400
+          TOTAL NUMBER OF VARIABLES IN THE MODEL                 5722
+          (DEGREES OF FREEDOM PLUS MAX NO. OF ANY LAGRANGE MULTIPLIER
+           VARIABLES. INCLUDE *PRINT,SOLVE=YES TO GET THE ACTUAL NUMBER.)
+
+
+
+
+
+          THE PROGRAM HAS DISCOVERED    10 FATAL ERRORS
+
+               ** EXECUTION IS TERMINATED **
+
+
+
+                              END OF USER INPUT PROCESSING
+
+
+
+     JOB TIME SUMMARY
+       USER TIME (SEC)      =     0.10    
+       SYSTEM TIME (SEC)    =      0.0    
+       TOTAL CPU TIME (SEC) =     0.10    
+       WALLCLOCK TIME (SEC) =            0

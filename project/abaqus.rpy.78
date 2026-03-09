@@ -1,0 +1,28 @@
+# -*- coding: mbcs -*-
+#
+# Abaqus/CAE Release 2024 replay file
+# Internal Version: 2023_09_21-20.55.25 RELr426 190762
+# Run by W on Mon Mar  9 10:54:50 2026
+#
+
+# from driverUtils import executeOnCaeGraphicsStartup
+# executeOnCaeGraphicsStartup()
+#: Executing "onCaeGraphicsStartup()" in the site directory ...
+from abaqus import *
+from abaqusConstants import *
+session.Viewport(name='Viewport: 1', origin=(1.07451, 0.865979), width=158.168, 
+    height=85.9052)
+session.viewports['Viewport: 1'].makeCurrent()
+from driverUtils import executeOnCaeStartup
+executeOnCaeStartup()
+execfile(
+    'E:/workspace/geometric-contact-potential-main/project/scripts/run_job.py', 
+    __main__.__dict__)
+#: 模型数据库 "E:\workspace\geometric-contact-potential-main\project\runs\sphere_plane_2d\p0000\model.cae" 已打开.
+session.viewports['Viewport: 1'].setValues(displayedObject=None)
+#: 模型数据库已保存到 "E:\workspace\geometric-contact-potential-main\project\runs\sphere_plane_2d\p0000\model.cae".
+#: Created INP file: E:\workspace\geometric-contact-potential-main\project\runs\sphere_plane_2d\p0000\Job-1.inp
+#: Job 'Job-1' is ready for submission.
+#: Run 'abaqus job=Job-1 interactive' to execute the analysis.
+print('RT script done')
+#: RT script done

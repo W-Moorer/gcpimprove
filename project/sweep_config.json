@@ -1,0 +1,10 @@
+{
+  "grid": {
+    "global_size": [1.0],
+    "refine_size": [0.1],
+    "refine_radius": [5.0],
+    "family": ["CPE4I"],
+    "max_inc": [0.01],
+    "contact_mode": ["contact_pair"]
+  }
+}

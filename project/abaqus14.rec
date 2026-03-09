@@ -1,0 +1,51 @@
+# -*- coding: mbcs -*-
+from mesh import *
+del mdb.models['Model-1']
+mdb.Model(name='Model-1')
+mdb.models['Model-1'].Material(name='Mat-1')
+mdb.models['Model-1'].materials['Mat-1'].Elastic(table=((210000.0, 0.3), ))
+mdb.models['Model-1'].Part(dimensionality=TWO_D_PLANAR, name='Block', type=
+    DEFORMABLE_BODY)
+mdb.models['Model-1'].ConstrainedSketch(name='block_sketch', sheetSize=160.0)
+mdb.models['Model-1'].sketches['block_sketch'].rectangle(point1=(0.0, 0.0), 
+    point2=(40.0, 20.0))
+mdb.models['Model-1'].parts['Block'].BaseShell(sketch=
+    mdb.models['Model-1'].sketches['block_sketch'])
+del mdb.models['Model-1'].sketches['block_sketch']
+mdb.models['Model-1'].HomogeneousSolidSection(material='Mat-1', name=
+    'SolidSection', thickness=None)
+mdb.models['Model-1'].parts['Block'].SectionAssignment(region=Region(
+    faces=mdb.models['Model-1'].parts['Block'].faces.getSequenceFromMask(mask=(
+    '[#1 ]', ), )), sectionName='SolidSection')
+mdb.models['Model-1'].Part(dimensionality=TWO_D_PLANAR, name='Indenter', type=
+    DISCRETE_RIGID_SURFACE)
+mdb.models['Model-1'].ConstrainedSketch(name='ind_sketch', sheetSize=160.0)
+mdb.models['Model-1'].sketches['ind_sketch'].ArcByCenterEnds(center=(20.0, 
+    22.0), direction=CLOCKWISE, point1=(10.0, 22.0), point2=(30.0, 22.0))
+mdb.models['Model-1'].parts['Indenter'].BaseWire(sketch=
+    mdb.models['Model-1'].sketches['ind_sketch'])
+del mdb.models['Model-1'].sketches['ind_sketch']
+mdb.models['Model-1'].parts['Indenter'].ReferencePoint(point=(20.0, 22.0, 0.0))
+mdb.models['Model-1'].rootAssembly.DatumCsysByDefault(CARTESIAN)
+mdb.models['Model-1'].rootAssembly.Instance(dependent=ON, name='Block-1', part=
+    mdb.models['Model-1'].parts['Block'])
+mdb.models['Model-1'].rootAssembly.Instance(dependent=ON, name='Indenter-1', 
+    part=mdb.models['Model-1'].parts['Indenter'])
+mdb.models['Model-1'].StaticStep(initialInc=0.001, maxInc=0.01, minInc=1e-08, 
+    name='Step-1', nlgeom=False, previous='Initial', timePeriod=1.0)
+mdb.models['Model-1'].rootAssembly.Surface(name='S_BLOCK_TOP', side1Edges=
+    mdb.models['Model-1'].rootAssembly.instances['Block-1'].edges.getSequenceFromMask(
+    mask=('[#4 ]', ), ))
+mdb.models['Model-1'].rootAssembly.Surface(name='S_IND', side1Edges=
+    mdb.models['Model-1'].rootAssembly.instances['Indenter-1'].edges)
+mdb.models['Model-1'].ContactProperty('IntProp-1')
+mdb.models['Model-1'].interactionProperties['IntProp-1'].NormalBehavior(
+    allowSeparation=ON, pressureOverclosure=HARD)
+mdb.models['Model-1'].interactionProperties['IntProp-1'].TangentialBehavior(
+    formulation=FRICTIONLESS)
+mdb.models['Model-1'].SurfaceToSurfaceContactStd(adjustMethod=NONE, 
+    createStepName='Initial', interactionProperty='IntProp-1', master=
+    mdb.models['Model-1'].rootAssembly.surfaces['S_IND'], name='Int-1', slave=
+    mdb.models['Model-1'].rootAssembly.surfaces['S_BLOCK_TOP'], sliding=FINITE, 
+    thickness=ON)
+#* TypeError:  ¹Ø¼ü×Ö´íÎó: master

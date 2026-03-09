@@ -1,0 +1,2 @@
+case_id,param_id,global_size,refine_size,refine_radius,family,max_inc,contact_mode,run_dir
+sphere_plane_2d,p0000,1.0,0.1,5.0,CPE4I,0.01,contact_pair,E:\workspace\geometric-contact-potential-main\project\runs\sphere_plane_2d\p0000

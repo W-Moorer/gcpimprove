@@ -1,0 +1,10 @@
+{
+  "history_output": {
+    "rp_vars": ["U2", "RF2"],
+    "surface_vars": ["CFNM", "CAREA", "XN", "CMN"]
+  },
+  "field_output": {
+    "surface_vars": ["CSTRESS", "CDISP", "CFORCE", "CSTATUS", "CNAREA"],
+    "frequency": 1
+  }
+}

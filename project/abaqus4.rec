@@ -1,0 +1,14 @@
+# -*- coding: mbcs -*-
+from mesh import *
+del mdb.models['Model-1']
+mdb.Model(name='Model-1')
+mdb.models['Model-1'].Material(name='Mat-1')
+mdb.models['Model-1'].materials['Mat-1'].Elastic(table=((210000.0, 0.3), ))
+mdb.models['Model-1'].ConstrainedSketch(name='block_sketch', sheetSize=160.0)
+mdb.models['Model-1'].sketches['block_sketch'].rectangle(point1=(0.0, 0.0), 
+    point2=(40.0, 20.0))
+mdb.models['Model-1'].Part(dimensionality=AXISYMMETRIC, name='Block', type=
+    DEFORMABLE_BODY)
+mdb.models['Model-1'].parts['Block'].BaseSolidExtrude(depth=1.0, sketch=
+    mdb.models['Model-1'].sketches['block_sketch'])
+#* 部件是轴对称的, 不能有非平面形状的特征.

@@ -1,0 +1,3 @@
+# -*- coding: mbcs -*-
+from mesh import *
+del mdb.models['Model-1']
